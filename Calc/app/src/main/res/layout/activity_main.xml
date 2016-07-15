@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jeet.jeet.calc.MainActivity"
+    android:padding="5dp"
+    android:gravity="fill_horizontal|center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultText"
+        android:height="48dp"
+        android:width="240dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:backgroundTint="#fffefe"
+        android:textAlignment="gravity"
+        android:background="@drawable/text"
+        android:padding="5dp"
+        android:layout_above="@+id/gridLayout"
+        android:layout_toStartOf="@+id/backspace" />
+
+    <GridLayout
+        android:layout_width="200dp"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/gridLayout"
+        android:padding="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:foregroundGravity="center_vertical|center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textError"
+            android:layout_column="2"
+            android:layout_columnSpan="5"
+            android:height="20dp"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:layout_row="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/errorText"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_columnSpan="3"
+            android:textColor="#ed7070"
+            android:textStyle="bold|italic" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BIN"
+            android:id="@+id/op14"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:textSize="10sp"
+            android:onClick="setOperator"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pi"
+            android:id="@+id/button3"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:onClick="setPi"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="e"
+            android:id="@+id/button2"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:onClick="setE"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG"
+            android:id="@+id/op12"
+            android:layout_row="3"
+            android:layout_column="4"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="("
+            android:id="@+id/op7"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="^"
+            android:id="@+id/op6"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=")"
+            android:id="@+id/op8"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/op13"
+            android:layout_row="4"
+            android:layout_column="4"
+            android:text="ln"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/num1"
+            android:layout_row="5"
+            android:layout_column="5"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/num2"
+            android:layout_row="5"
+            android:layout_column="6"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/num3"
+            android:layout_row="5"
+            android:layout_column="7"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="92dp"
+            android:text="sin"
+            android:id="@+id/op9"
+            android:layout_row="3"
+            android:layout_column="5"
+            android:onClick="setOperator"
+            android:layout_rowSpan="2"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="91dp"
+            android:text="cos"
+            android:id="@+id/op10"
+            android:layout_row="3"
+            android:layout_column="6"
+            android:onClick="setOperator"
+            android:layout_rowSpan="2"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="91dp"
+            android:text="tan"
+            android:id="@+id/op11"
+            android:layout_row="3"
+            android:layout_column="7"
+            android:onClick="setOperator"
+            android:layout_rowSpan="2"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:text="/"
+            android:id="@+id/op1"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="2"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="94dp"
+            android:layout_height="93dp"
+            android:text="*"
+            android:id="@+id/op2"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="2"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/num4"
+            android:layout_row="6"
+            android:layout_column="5"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/num5"
+            android:layout_row="6"
+            android:layout_column="6"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:id="@+id/num6"
+            android:layout_row="6"
+            android:layout_column="7"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="92dp"
+            android:layout_height="95dp"
+            android:text="-"
+            android:id="@+id/op4"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="93dp"
+            android:layout_height="95dp"
+            android:text="+"
+            android:id="@+id/op3"
+            android:layout_row="7"
+            android:layout_column="3"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2"
+            android:onClick="setOperator"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/num7"
+            android:layout_row="7"
+            android:layout_column="5"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:id="@+id/num8"
+            android:layout_row="7"
+            android:layout_column="6"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:id="@+id/num9"
+            android:layout_row="7"
+            android:layout_column="7"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:id="@+id/dot"
+            android:layout_row="8"
+            android:layout_column="5"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/num0"
+            android:layout_row="8"
+            android:layout_column="6"
+            android:onClick="setOperand"
+            android:textSize="10sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLS"
+            android:id="@+id/reset"
+            android:layout_row="8"
+            android:layout_column="7"
+            android:onClick="reset"
+            android:background="#008080"
+            android:textColor="#ffffff"
+            android:width="35dp"
+            android:minHeight="38dp"
+            android:allowUndo="true"
+            android:textSize="10sp" />
+    </GridLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">"
+        android:id="@+id/calculate"
+        android:onClick="calculate"
+        android:height="40dp"
+        android:background="#008080"
+        android:textColor="#ffffff"
+        android:width="30dp"
+        android:layout_above="@+id/gridLayout"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;"
+        android:id="@+id/backspace"
+        android:onClick="onBackspace"
+        android:height="40dp"
+        android:background="#008080"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/gridLayout"
+        android:layout_toStartOf="@+id/calculate"
+        android:width="30dp" />
+</RelativeLayout>
