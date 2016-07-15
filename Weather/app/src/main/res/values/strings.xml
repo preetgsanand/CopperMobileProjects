@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_weather_maps_app_id">bedde5a9f0eefd2148ea11d75b2448ac</string>
+    <string name = "google_places_web_api">AIzaSyAw-HRJYHQ9z5-GNTOoy85ZM9ZJVPbc4_w</string>
+    <string name="up_arrow">\U25B2</string>
+    <string name="down_arrow">\U25BC</string>
+</resources>

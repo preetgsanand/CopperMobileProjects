@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rahul.forms.EducationInfoFragment"
+    android:background="#ECEFF1"
+    android:onClick="hideSoftKeyboard">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#FFAB00"
+        android:id="@+id/headerEducation"
+        android:onClick="hideSoftKeyboard">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Education Information"
+            android:id="@+id/header"
+            android:layout_marginTop="91dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:enabled="true"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp" />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:id="@+id/button"
+            android:background="@drawable/roundbutton"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="91dp"
+            android:onClick="checkEducation"
+            android:textColor="#FFAB00"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SCHOOL"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/headerEducation"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp"
+        android:textColor="#FFAB00"
+        android:layout_marginLeft="15dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:id="@+id/schoolName"
+        android:layout_below="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:background="@drawable/edittext"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:hint="School Name"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"/>
+
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:id="@+id/schoolCity"
+        android:background="@drawable/edittext"
+        android:layout_marginLeft="25dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:hint="City"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/schoolName"
+        android:layout_alignStart="@+id/textView8"
+        android:focusableInTouchMode="true" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/schoolState"
+        android:background="@drawable/edittext"
+        android:layout_marginLeft="25dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:hint="State"
+        android:layout_alignTop="@+id/schoolCity"
+        android:layout_alignEnd="@+id/schoolName"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="MARKS"
+        android:id="@+id/textView9"
+        android:layout_marginTop="35dp"
+        android:textColor="#FFAB00"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/schoolCity"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:id="@+id/xMarks"
+        android:background="@drawable/edittext"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:hint="10th"
+        android:layout_below="@+id/textView9"
+        android:layout_alignStart="@+id/textView9"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="%"
+        android:id="@+id/textView10"
+        android:textColor="#FFAB00"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/xMarks"
+        android:layout_toEndOf="@+id/xMarks"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:id="@+id/x2Marks"
+        android:background="@drawable/edittext"
+        android:layout_marginLeft="15dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:hint="12th"
+        android:layout_alignTop="@+id/xMarks"
+        android:layout_toEndOf="@+id/schoolCity"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="%"
+        android:id="@+id/textView11"
+        android:textColor="#FFAB00"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/x2Marks"
+        android:layout_toEndOf="@+id/x2Marks"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:id="@+id/error"
+        android:layout_below="@+id/headerEducation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#f04d4d" />
+
+
+</RelativeLayout>

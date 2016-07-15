@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:id="@+id/gridItem"
+    android:background="@drawable/round_edittext"
+    android:paddingBottom="2dp"
+    android:paddingLeft="3dp"
+    android:paddingTop="3dp"
+    android:paddingRight="3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#42A5F5"
+        android:layout_gravity="center"
+        android:id="@+id/gridrelative">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="INDIA"
+            android:id="@+id/country"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Country"
+            android:id="@+id/location"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/country"
+            android:layout_alignStart="@+id/country" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Description"
+            android:id="@+id/description"
+            android:layout_below="@+id/location"
+            android:layout_alignStart="@+id/location"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/weathericon"
+            android:background="@drawable/sunny"
+            android:layout_marginTop="23dp"
+            android:layout_below="@+id/description"
+            android:layout_alignStart="@+id/description"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="32"
+            android:id="@+id/temperature"
+            android:textSize="70sp"
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/textView"
+            android:layout_toStartOf="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="O"
+            android:id="@+id/textView"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/country"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="MIN  40"
+            android:id="@+id/mintemp"
+            android:textColor="#a4ed6d"
+            android:textAlignment="viewEnd"
+            android:layout_below="@+id/temperature"
+            android:layout_alignEnd="@+id/temperature" />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="MAX  40"
+            android:id="@+id/maxtemp"
+            android:textColor="#e92d24"
+            android:layout_below="@+id/mintemp"
+            android:layout_alignStart="@+id/mintemp"
+            android:textAlignment="viewEnd" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/humidityIcon"
+            android:layout_below="@+id/temperature"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/humidity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="89 %"
+            android:id="@+id/humidity"
+            android:layout_below="@+id/mintemp"
+            android:layout_toEndOf="@+id/humidityIcon"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="10 MAR, 2016"
+            android:id="@+id/time"
+            android:layout_above="@+id/temperature"
+            android:layout_alignStart="@+id/country"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

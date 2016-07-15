@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rahul.forms.ProfileDisplayFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/personal"
+        android:background="#ECEFF1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Personal Information"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:background="@color/personal"
+            android:padding="10dp"
+            android:id="@+id/personalText"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/personalText"
+            android:background="@drawable/edittext"
+            android:layout_margin="5dp"
+            android:id="@+id/personalEditText"
+            android:padding="10dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="&lt;"
+            android:id="@+id/back"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/roundbutton"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:textColor="@color/personal"/>
+
+    </RelativeLayout>
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+            android:layout_below="@+id/personal"
+            android:id="@+id/additional"
+            android:background="#ECEFF1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Additional Information"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:background="@color/additional"
+                android:padding="10dp"
+                android:id="@+id/additionalText"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/additionalText"
+                android:background="@drawable/edittext"
+                android:layout_margin="5dp"
+                android:id="@+id/additionalEditText"
+                android:padding="10dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:id="@+id/education"
+            android:layout_below="@+id/additional"
+            android:background="#ECEFF1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Education Information"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:background="@color/education"
+                android:padding="10dp"
+                android:id="@+id/educationText"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/educationText"
+                android:background="@drawable/edittext"
+                android:layout_margin="5dp"
+                android:id="@+id/educationEditText"
+                android:padding="10dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:id="@+id/jee"
+            android:layout_below="@+id/education"
+            android:layout_alignParentBottom="true"
+            android:background="#ECEFF1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="JEE Information"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:background="@color/jee"
+                android:padding="10dp"
+                android:id="@+id/jeeText"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/jeeText"
+                android:background="@drawable/edittext"
+                android:layout_margin="5dp"
+                android:id="@+id/jeeEditText"
+                android:padding="10dp" />
+        </RelativeLayout>
+</RelativeLayout>

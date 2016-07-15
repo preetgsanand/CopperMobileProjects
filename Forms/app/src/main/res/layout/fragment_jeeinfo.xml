@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rahul.forms.JEEInfoFragment"
+    android:background="#ECEFF1"
+    android:onClick="hideSoftKeyboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#EC407A"
+        android:id="@+id/headerJEE"
+        android:onClick="hideSoftKeyboard">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Additional Information"
+            android:id="@+id/header"
+            android:layout_marginLeft="15dp"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:layout_marginTop="91dp" />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:id="@+id/button"
+            android:background="@drawable/roundbutton"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="91dp"
+            android:onClick="checkJEE"
+            android:textColor="#EC407A"
+            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ENTRY ID"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/headerJEE"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="38dp"
+        android:textColor="#EC407A"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/entryId"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:width="300dp"
+        android:background="@drawable/edittext"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="JEE MAIN"
+        android:id="@+id/textView13"
+        android:layout_marginLeft="15dp"
+        android:textColor="#EC407A"
+        android:textSize="18sp"
+        android:layout_below="@+id/entryId"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35sp" />
+
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainRank"
+        android:padding="10dp"
+        android:width="300dp"
+        android:background="@drawable/edittext"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/entryId"
+        android:layout_marginTop="10dp"
+        android:hint="Rank"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:singleLine="true"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainMarks"
+        android:padding="10dp"
+        android:width="300dp"
+        android:background="@drawable/edittext"
+        android:hint="Marks"
+        android:layout_alignTop="@+id/mainRank"
+        android:layout_alignEnd="@+id/entryId"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:singleLine="true"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="JEE ADVANCE"
+        android:id="@+id/textView14"
+        android:layout_marginLeft="15dp"
+        android:textColor="#EC407A"
+        android:textSize="18sp"
+        android:layout_below="@+id/mainRank"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        />
+
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/advanceRank"
+        android:padding="10dp"
+        android:width="300dp"
+        android:background="@drawable/edittext"
+        android:hint="Rank"
+        android:layout_below="@+id/textView14"
+        android:layout_alignStart="@+id/mainRank"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:singleLine="true"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/advanceMarks"
+        android:padding="10dp"
+        android:width="300dp"
+        android:background="@drawable/edittext"
+        android:hint="Marks"
+        android:layout_alignTop="@+id/advanceRank"
+        android:layout_alignStart="@+id/mainMarks"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:singleLine="true"
+        android:inputType="number" />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:id="@+id/error"
+        android:layout_below="@+id/headerJEE"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="#f04d4d" />
+</RelativeLayout>

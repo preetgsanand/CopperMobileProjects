@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#263238</color>
+    <color name="colorPrimaryDark">#263238</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name = "clear_sky">#FFAB00</color>
+    <color name = "few_clouds">#FFAB00</color>
+    <color name = "scattered_clouds">#FFAB00</color>
+    <color name = "broken_clouds">#00ACC1</color>
+    <color name = "shower_rain">#42A5F5</color>
+    <color name = "rain">#42A5F5</color>
+    <color name = "thunderstorm">#33691E</color>
+    <color name = "snow">#546E7A</color>
+    <color name = "mist">#546E7A</color>
+    <color name="white">#ECEFF1</color>
+</resources>
